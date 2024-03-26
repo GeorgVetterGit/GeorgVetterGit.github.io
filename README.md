@@ -5,6 +5,6 @@
 
 ### Projects
 
-(Cluster)[ClusterViz.html]
+[Cluster](ClusterViz.html)
 
 ### Publications
