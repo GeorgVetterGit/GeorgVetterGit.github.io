@@ -6,6 +6,21 @@
 
 <br>
 
+## Projects
+
+### Pokémon Clustering
+![Thumbnail](/assets/graph%20(1).png)
+In this project I used my Typo Generator to create typos in Pokémon names. I then clustered the noisy Pokémon names with an ensemble clustering consisting of different similarity measures. The method is modularly variable and achieves a very good F1-Score of over .90. The visualisation of the clusters can be viewed below. <br>
+[Read more](PokèmonClustering.md) | [View Cluster Visualisation](/assets/ClusterViz.html)
+
+### Typo Generator
+Link to Steamlit App
+
+### PicNic Bon Transformation
+Link to Steamlit App
+
+***
+
 ## Publications
 
 Beser, Alper; Lackes, Richard; Siepermann, Markus; Vetter, Georg (2020): _How Firms should respond to negative Word-Of-Mouth_. In: Proceedings of the 28th European Conference on Information Systems (ECIS). available online at [AIS](https://aisel.aisnet.org/ecis2020_rp/148). (VHB-JourQual 3: B)<br>
