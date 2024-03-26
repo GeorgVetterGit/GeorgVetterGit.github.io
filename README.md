@@ -1,12 +1,8 @@
 # Portfolio
-
-## Education
-
-***
-
-## Work Experience
+<br>
 
 ***
+<br>
 
 ## Projects
 
@@ -14,18 +10,14 @@
 ![Thumbnail](/assets/graph%20(1).png)
 Hier kommt die Projektbeschreibung hin.<br>
 [View on Medium](https://medium.com/@georg.vetter.privat) | [View Cluster Visualisation](/assets/ClusterViz.html)
-
-### Typo Generator
-Link to Steamlit App
-
-### PicNic Bon Transformation
-Link to Steamlit App
+<br>
 
 ***
 
-## Publications
-Gala Paper<br>
 <br>
+
+## Publications
+
 Beser, Alper; Lackes, Richard; Siepermann, Markus; Vetter, Georg (2020): _How Firms should respond to negative Word-Of-Mouth_. In: Proceedings of the 28th European Conference on Information Systems (ECIS). available online at [AIS](https://aisel.aisnet.org/ecis2020_rp/148). (VHB-JourQual 3: B)<br>
 <br>
 Lackes, Richard; Siepermann, Markus; Vetter, Georg (2020): _Where can I take You? - The Drivers of Autonomous Driving Adoption_. In: Proceedings of the 28th European Conference on Information Systems (ECIS). available online at [AIS](https://aisel.aisnet.org/ecis2020_rp/159). (VHB-JourQual 3: B)<br>
