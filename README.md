@@ -13,11 +13,6 @@
 In this project I used my Typo Generator to create typos in Pokémon names. I then clustered the noisy Pokémon names with an ensemble clustering consisting of different similarity measures. The method is modularly variable and achieves a very good F1-Score of over .90. The visualisation of the clusters can be viewed below. <br>
 [Read more](PokèmonClustering.md) | [View Cluster Visualisation](/assets/ClusterViz.html)
 
-### Typo Generator
-Link to Steamlit App
-
-### PicNic Bon Transformation
-Link to Steamlit App
 
 ***
 
