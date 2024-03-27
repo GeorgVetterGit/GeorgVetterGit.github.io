@@ -18,22 +18,27 @@ In this project I used my Typo Generator to create typos in Pokémon names. I th
 ***
 
 ## Publications
+#### 2024
  Aguirre Reid, Sören; Lackes, Richard;  Siepermann, Markus; Vetter, Georg; Wenner, Wladimir (2024): _Oral Examinations Simulator – An Intelligent Tutoring Tool to Reduce Oral Exam Anxiety_.  In: Dondio, P., et al. Games and Learning Alliance. GALA 2023. Lecture Notes in Computer Science, vol 14475. Springer, Cham., p. 438–443 DOI: 10.1007/978-3-031-49065-1_46.<br>
 <br>
+#### 2020
 Beser, Alper; Lackes, Richard; Siepermann, Markus; Vetter, Georg (2020): _How Firms should respond to negative Word-Of-Mouth_. In: Proceedings of the 28th European Conference on Information Systems (ECIS). available online at [AIS](https://aisel.aisnet.org/ecis2020_rp/148).<br>
 <br>
 Lackes, Richard; Siepermann, Markus; Vetter, Georg (2020): _Where can I take You? - The Drivers of Autonomous Driving Adoption_. In: Proceedings of the 28th European Conference on Information Systems (ECIS). available online at [AIS](https://aisel.aisnet.org/ecis2020_rp/159).<br>
 <br>
 Lackes, Richard; Siepermann, Markus; Vetter, Georg (2020): _What drives decision makers to follow or ignore forecasting tools - A game based analysis_. In: Journal of Business Research 106, p. 315–322. DOI: 10.1016/j.jbusres.2019.02.036.<br>
 <br>
+#### 2019
 Lackes, Richard; Siepermann, Markus; Vetter, Georg (2019): _Can I Help You? – The Acceptance of Intelligent Personal Assistants_. In: Pańkowska und Gerstner (Hg.): Perspectives in Business Informatics Research, Bd. 365. 1st ed.: Springer International Publishing (Lecture Notes in Business Information Processing), p. 204–218.<br>
 <br>
 Vetter, Georg (2019): _The Adoption of Smart Systems - Influencing Factors of the Intention to Use and Actual Use_. Dissertation, Technische Universität Dortmund. DOI: 10.17877/DE290R-20092 <br>
 <br>
+#### 2018
 Vetter, Georg; Siepermann, Markus; Lackes, Richard (2018): _What Drives Decision Makers to Follow or Ignore Forecasting Tools - A Game Based Analysis_. In: Tung Bui (Hg.): Proceedings of the 51st Hawaii International Conference on System Sciences.<br>
 <br>
 Lackes, Richard; Siepermann, Markus; Vetter, Georg (2018): _Turn it on! - User Acceptance of Direct Load Control and Load Shifting of Home Appliances_. In: Proceedings of the 26th European Conference on Information Systems (ECIS). available online at [AIS](https://aisel.aisnet.org/ecis2018_rp/98)<br>
 <br>
+#### 2017
 Lackes, Richard; Siepermann, Markus; Vetter, Georg (2017): _The Effect of Uncertainty and Quality Perception on the Usage of Forecasting Tools – A Game Based Analysis_. In: Dias (Hg.): Games and Learning Alliance, Bd. 10653. 1st ed.: Springer International Publishing (Lecture Notes in Computer Science), p. 228–237.
 
 
