@@ -18,7 +18,8 @@ In this project I used my Typo Generator to create typos in Pokémon names. I th
 ***
 
 ## Publications
-
+ Aguirre Reid, Sören; Lackes, Richard;  Siepermann, Markus; Vetter, Georg; Wenner, Wladimir (2024): _Oral Examinations Simulator – An Intelligent Tutoring Tool to Reduce Oral Exam Anxiety_.  In: Dondio, P., et al. Games and Learning Alliance. GALA 2023. Lecture Notes in Computer Science, vol 14475. Springer, Cham. https://doi.org/10.1007/978-3-031-49065-1_46
+<br>
 Beser, Alper; Lackes, Richard; Siepermann, Markus; Vetter, Georg (2020): _How Firms should respond to negative Word-Of-Mouth_. In: Proceedings of the 28th European Conference on Information Systems (ECIS). available online at [AIS](https://aisel.aisnet.org/ecis2020_rp/148).<br>
 <br>
 Lackes, Richard; Siepermann, Markus; Vetter, Georg (2020): _Where can I take You? - The Drivers of Autonomous Driving Adoption_. In: Proceedings of the 28th European Conference on Information Systems (ECIS). available online at [AIS](https://aisel.aisnet.org/ecis2020_rp/159).<br>
