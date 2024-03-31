@@ -21,7 +21,7 @@ In this project I used my Typo Generator to create typos in Pokémon names. I th
 ![Thumbnail](/assets/pexels-kaboompics-com-6061.jpg)
 To train a cluster algorithm, I needed data that was already clustered, in the form that the data points represent different spellings of a word to which they are assigned as a cluster. This allows me to check whether my cluster algorithm works well and to better optimise the hyperparameters. However, the use of a typo generator can also be interesting in many other areas. <br><br>
 ![Static Badge](https://img.shields.io/badge/NLP-blue) ![Static Badge](https://img.shields.io/badge/Machine_Learning-blue) <br><br>
-[Read more](TypoGenerator.md)
+[Read more](Typo Generator.md)
 <br>
 
 ***
