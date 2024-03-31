@@ -1,6 +1,9 @@
+[back](README.md)
 # Project description: Development of a typo generator in Python
 
-![Text](/assets/pexels-kaboompics-com-6061.jpg)
+![Text](/assets/pexels-kaboompics-com-6061.jpg)<br>
+
+[![Static Badge](https://img.shields.io/badge/Medium-View_on_Medium-%23000000?logo=Medium)](https://medium.com/@georg.vetter.privat/how-to-build-a-typo-generator-from-scratch-in-python-ace485aac18b) [![Static Badge](https://img.shields.io/badge/GitHub-View_on_GitHub-%23181717?logo=GitHub)](https://github.com/GeorgVetterGit/typo_generator)
 
 ## Introduction:
 A typo generator is a useful tool for various use cases, including software development, data analysis, fraud detection, and language processing. This project focuses on creating a typo generator from scratch in Python and demonstrating how it can be used to generate and analyze different types of typos.
