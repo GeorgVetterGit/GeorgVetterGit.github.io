@@ -1,7 +1,7 @@
 [back](README.md)
 # Project description: Development of a typo generator in Python
 
-![Text](pexels-kaboompics-com-6061.jpg)<br>
+![Text](/assets/typo_generator/pictures/pexels-kaboompics-com-6061.jpg)<br>
 
 [![Static Badge](https://img.shields.io/badge/Medium-View_on_Medium-%23000000?logo=Medium)](https://medium.com/@georg.vetter.privat/how-to-build-a-typo-generator-from-scratch-in-python-ace485aac18b) [![Static Badge](https://img.shields.io/badge/GitHub-View_on_GitHub-%23181717?logo=GitHub)](https://github.com/GeorgVetterGit/typo_generator)
 
@@ -29,13 +29,13 @@ Using a typo generator offers numerous use cases:
 The results were presented through various visualizations, including:
 + Distribution of variants per word to show how many different typos were generated for each word.<br>
 
-![Text](typo_generator.png)<br>
+![Text](/assets/typo_generator/pictures/typo_generator.png)<br>
 + Correlation analysis between the length of words and the number of variants generated to investigate whether longer words tend to have more variants.<br>
 
-![Text](corr.webp)<br>
+![Text](/assets/typo_generator/pictures/corr.webp)<br>
 + Graphs to illustrate the relationship between the number of variants and the length of words.<br>
 
-![Text](tp.webp)<br>
+![Text](/assets/typo_generator/pictures/tp.webp)<br>
 
 ## Findings:
 Through this project I learned:
