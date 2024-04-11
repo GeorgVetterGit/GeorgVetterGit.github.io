@@ -9,7 +9,7 @@
 ## Projects
 
 ### Pokémon Clustering
-![Thumbnail](/assets/graph%20(1).png)
+![Thumbnail](/assets/clustering/BlogPost/pictures/graph%20(1).png)
 In this project I used my Typo Generator to create typos in Pokémon names. I then clustered the noisy Pokémon names with an ensemble clustering consisting of different similarity measures. The method is modularly variable and achieves a very good F1-Score of over .90. The visualisation of the clusters can be viewed below. <br><br>
 ![Static Badge](https://img.shields.io/badge/NLP-blue) ![Static Badge](https://img.shields.io/badge/Clustering-blue) ![Static Badge](https://img.shields.io/badge/Machine_Learning-blue) ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br><br>
 [Read more](/assets/clustering/BlogPost/Text/clustering.md)
