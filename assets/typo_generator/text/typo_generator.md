@@ -1,4 +1,4 @@
-[back](README.md)
+[back](/../../../README.md)
 # Project description: Development of a typo generator in Python
 
 ![Text](/assets/typo_generator/pictures/pexels-kaboompics-com-6061.jpg)<br>
