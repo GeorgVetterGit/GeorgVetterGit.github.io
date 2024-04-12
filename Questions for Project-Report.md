@@ -39,3 +39,5 @@ If you were going to continue this work, what next steps you would take with thi
 How you would explain what you did to a data scientist?
 
 How you would explain what you did to a non-data scientist
+
+Was ist der Business Case?
