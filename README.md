@@ -11,25 +11,25 @@
 ### Pokémon Clustering
 ![Thumbnail](/assets/clustering/BlogPost/pictures/graph%20(1).png)
 In this project I used my Typo Generator to create typos in Pokémon names. I then clustered the noisy Pokémon names with an ensemble clustering consisting of different similarity measures. The method is modularly variable and achieves a very good F1-Score of over .90. The visualisation of the clusters can be viewed below. <br><br>
-![Static Badge](https://img.shields.io/badge/NLP-blue) ![Static Badge](https://img.shields.io/badge/Clustering-blue) ![Static Badge](https://img.shields.io/badge/Machine_Learning-blue) ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br><br>
+![Static Badge](https://img.shields.io/badge/NLP-blue) ![Static Badge](https://img.shields.io/badge/Clustering-blue) ![Static Badge](https://img.shields.io/badge/Machine_Learning-blue) ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br>
 [Read more](/assets/clustering/BlogPost/Text/clustering.md)
 
-<br>
 <br>
 
 ### Typo Generator
 ![Thumbnail](/assets/typo_generator/pictures/pexels-kaboompics-com-6061.jpg)
 To train a cluster algorithm, I needed data that was already clustered, in the form that the data points represent different spellings of a word to which they are assigned as a cluster. This allows me to check whether my cluster algorithm works well and to better optimise the hyperparameters. However, the use of a typo generator can also be interesting in many other areas. <br><br>
-![Static Badge](https://img.shields.io/badge/NLP-blue) ![Static Badge](https://img.shields.io/badge/Machine_Learning-blue) <br><br>
+![Static Badge](https://img.shields.io/badge/NLP-blue) ![Static Badge](https://img.shields.io/badge/Machine_Learning-blue) <br>
 [Read more](/assets/typo_generator/text/typo_generator.md)
 
-<br>
 <br>
 
 ### t-SNE Visualization
 ![Thumbnail](/assets/tsne/pictures/clusters.png)
+The project investigated visualizing high-dimensional data from the MNIST dataset using the t-SNE algorithm, preserving similarity between data points. Data was loaded from MNIST, then t-SNE applied to generate coordinates for a scatterplot, with each digit class represented by a distinct color. Results demonstrated clear clustering and separation between digit classes, suggesting t-SNE's efficacy for visualizing MNIST. This approach offers critical value to industries like OCR and fraud prevention, enhancing classification algorithms and speeding up development cycles for more efficient applications.<br><br>
+![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br>
 
-![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)
+[Read more](/assets/typo_generator/text/typo_generator.md)<br>
 ***
 
 <br>
