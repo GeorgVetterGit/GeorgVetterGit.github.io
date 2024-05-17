@@ -34,6 +34,11 @@ The project investigated visualizing high-dimensional data from the MNIST datase
 
 ### Judge a Book by its Color
 ![Thumbnail](/assets/book_visualisation/pictures/title.png)<br><br>
+This project analyzed the main colors of bestsellers over decades, aiming to identify dominant trends and visualize them effectively. Data from book titles, authors, and top-ranking periods were sourced from Wikipedia, while book covers were scraped from online sources. Through this analysis and visualization, valuable insights were gained into book cover design trends, providing a basis for further exploration in the field of book market analysis.<br><br>
+![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br>
+[Read more](/assets/book_visualisation/text/book_visualization.md)
+
+<br>
 
 ***
 
