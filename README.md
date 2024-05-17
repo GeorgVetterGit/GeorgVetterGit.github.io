@@ -28,7 +28,12 @@ To train a cluster algorithm, I needed data that was already clustered, in the f
 ![Thumbnail](/assets/tsne/pictures/clusters.png)<br><br>
 The project investigated visualizing high-dimensional data from the MNIST dataset using the t-SNE algorithm, preserving similarity between data points. Data was loaded from MNIST, then t-SNE applied to generate coordinates for a scatterplot, with each digit class represented by a distinct color. Results demonstrated clear clustering and separation between digit classes, suggesting t-SNE's efficacy for visualizing MNIST.<br><br>
 ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue) ![Static Badge](https://img.shields.io/badge/Clustering-blue)<br>
-[Read more](/assets/tsne/text/tsne.md)<br>
+[Read more](/assets/tsne/text/tsne.md)
+
+<br>
+
+### Judge a Book by its Color
+![Thumbnail](/assets/book_visualisation/pictures/title.png)<br><br>
 
 ***
 
