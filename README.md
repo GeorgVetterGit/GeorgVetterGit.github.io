@@ -28,7 +28,6 @@ To train a cluster algorithm, I needed data that was already clustered, in the f
 ![Thumbnail](/assets/tsne/pictures/clusters.png)<br><br>
 The project investigated visualizing high-dimensional data from the MNIST dataset using the t-SNE algorithm, preserving similarity between data points. Data was loaded from MNIST, then t-SNE applied to generate coordinates for a scatterplot, with each digit class represented by a distinct color. Results demonstrated clear clustering and separation between digit classes, suggesting t-SNE's efficacy for visualizing MNIST.<br><br>
 ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue) ![Static Badge](https://img.shields.io/badge/Clustering-blue)<br>
-
 [Read more](/assets/tsne/text/tsne.md)<br>
 
 ***
@@ -36,6 +35,9 @@ The project investigated visualizing high-dimensional data from the MNIST datase
 <br>
 
 ## Publications
+#### 2024
+Aguirre Reid, Sören; Vetter, Georg; Lackes, Richard; Siepermann, Markus (2024): _Is it all about fun? Self-service technology acceptance in Germany_. The International Review of Retail, Distribution and Consumer Research, 34(2), 201–227. https://doi.org/10.1080/09593969.2024.2342795.<br>
+<br>
 #### 2023
  Aguirre Reid, Sören; Lackes, Richard;  Siepermann, Markus; Vetter, Georg; Wenner, Wladimir (2023): _Oral Examinations Simulator – An Intelligent Tutoring Tool to Reduce Oral Exam Anxiety_.  In: Dondio, P., et al. Games and Learning Alliance. GALA 2023. Lecture Notes in Computer Science, vol 14475. Springer, Cham., p. 438–443 DOI: 10.1007/978-3-031-49065-1_46.<br>
 <br>
