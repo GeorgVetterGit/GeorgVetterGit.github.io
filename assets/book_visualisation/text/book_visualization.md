@@ -2,6 +2,8 @@
 
 ![Thumbnail](/assets/book_visualisation/pictures/title.png)<br>
 
+[View Visualization](/assets/book_visualisation/pictures/output_final.png)<br>
+
 __Introduction__<br>
 In this project, I investigated how the main colors of bestsellers have appeared over the past decades, whether there are visibly dominant main colors among bestsellers, and how these main colors can be visualized. This question is of great importance as it provides insights into the visual design of book covers and reveals potential trends over the years. By visualizing the main colors, one can draw conclusions about the book market and gain valuable insights into how book covers should be designed to be successful.
 
