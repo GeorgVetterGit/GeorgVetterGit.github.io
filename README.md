@@ -48,7 +48,7 @@ This project analyzed the main colors of bestsellers over decades, aiming to ide
 #### 2024
 Vetter, Georg (2024): _Manufacturer Name Clustering_. Kaggle. https://kaggle.com/competitions/manufacturer-name-clustering<br>
 <br>
-Aguirre Reid, Sören; Vetter, Georg; Lackes, Richard; Siepermann, Markus (2024): _Is it all about fun? Self-service technology acceptance in Germany_. The International Review of Retail, Distribution and Consumer Research, 34(2), 201–227. https://doi.org/10.1080/09593969.2024.2342795.<br>
+Aguirre Reid, Sören; Vetter, Georg; Lackes, Richard; Siepermann, Markus (2024): _Is it all about fun? Self-service technology acceptance in Germany_. The International Review of Retail, Distribution and Consumer Research, 34(2), 201–227. DOI: 10.1080/09593969.2024.2342795.<br>
 <br>
 #### 2023
 Aguirre Reid, Sören; Lackes, Richard;  Siepermann, Markus; Vetter, Georg; Wenner, Wladimir (2023): _Oral Examinations Simulator – An Intelligent Tutoring Tool to Reduce Oral Exam Anxiety_.  In: Dondio, P., et al. Games and Learning Alliance. GALA 2023. Lecture Notes in Computer Science, vol 14475. Springer, Cham., p. 438–443 DOI: 10.1007/978-3-031-49065-1_46.<br>
