@@ -8,6 +8,14 @@
 
 ## Projects
 
+### Solving n-Queens Problem with Genetic Algorithm
+![Thumbnail](/assets/nqueens/pictures/8queens_banner.png)<br><br>
+This project successfully applied Genetic Algorithms to solve the N-Queens problem, demonstrating their ability to optimize complex configurations while minimizing conflicts. The accompanying visualization, developed with `pygame`, effectively illustrates the algorithm's processes and highlights its educational and practical value. <br><br>
+![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br>
+[Read more](/assets/nqueens/text/nqueens.md)
+
+<br>
+
 ### Pokémon Clustering
 ![Thumbnail](/assets/clustering/BlogPost/pictures/graph%20(1).png)<br><br>
 In this project I used my Typo Generator to create typos in Pokémon names. I then clustered the noisy Pokémon names with an ensemble clustering consisting of different similarity measures. The method is modularly variable and achieves a very good F1-Score of over .90. The visualisation of the clusters can be viewed below. <br><br>
