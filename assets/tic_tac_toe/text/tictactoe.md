@@ -29,6 +29,8 @@ To validate the AI opponents, I:
 
 The app also allows users to **play against the AI opponents** themselves.
 
+https://georgvettergit-tic-tac-toe-reporting-apphome-zxc7r3.streamlit.app
+
 ## Results Evaluation
 The results showed a clear **increase in difficulty** among the AIs:
 - The **Random AI** is the easiest to beat.
