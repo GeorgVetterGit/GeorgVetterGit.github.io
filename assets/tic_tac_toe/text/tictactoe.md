@@ -1,6 +1,6 @@
 # Project Report: Tic Tac Toe with AI Opponents in Pygame
 
-![Thumbnail](/assets/book_visualisation/pictures/title.png)<br>
+![Thumbnail](/assets/tic_tac_toe/pictures/tic_tac_toe.png)<br>
 
 ## Research Questions
 This project aimed to answer the following questions:
@@ -25,11 +25,13 @@ For the reinforcement learning agent, I used **Q-learning**. The agent played **
 To validate the AI opponents, I:
 - **Played against each AI** myself,
 - Let the **AIs compete against each other**,
-- Published the results in a **Streamlit app**.
+- Published the results in a **Streamlit app**: [Open Streamlit App](https://georgvettergit-tic-tac-toe-reporting-apphome-zxc7r3.streamlit.app)
 
-The app also allows users to **play against the AI opponents** themselves.
+The app also allows users to **play against the AI opponents**:
 
-https://georgvettergit-tic-tac-toe-reporting-apphome-zxc7r3.streamlit.app
+- Play against **Random AI**: [Try it here](/assets/tic_tac_toe/random/index.html)
+- Play against **Q-Learning AI**: [Try it here](/assets/tic_tac_toe/qlearning/index.html)
+- Play against **Minimax AI**: [Try it here](/assets/tic_tac_toe/minimax/index.html)
 
 ## Results Evaluation
 The results showed a clear **increase in difficulty** among the AIs:
