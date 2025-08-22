@@ -14,4 +14,10 @@ In this project, I developed a Tic Tac Toe game using Pygame and implemented thr
 ![Static Badge](https://img.shields.io/badge/Optimization-blue) ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br>
 [Read more](/assets/tic_tac_toe/text/tictactoe.html)
 
+***
 <br>
+
+### Building a Smart Pong Opponent - From Simple Rules to Adaptive Behavior
+![Thumbnail](/assets/pong/pictures/pong_banner.png)<br><br>
+This project explores a simple adaptive Pong AI that moves its paddle in response to the ball’s vertical position, creating an opponent that appears intelligent despite its straightforward rules. Players can compete against the computer using arrow keys or play against another human on the same keyboard using W/S and arrow keys. The setup provides a hands-on way to experiment with agent-based behavior and adaptive systems in a fun, interactive environment.
+[Read More](/assets/pong/text/pong.html)
