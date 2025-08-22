@@ -10,7 +10,7 @@ Link to Visualisation:
 [Visualisation](/assets/clustering/BlogPost/Visuals/optmized_clusters.html) <br>
 
 Link to Notebook:
-[Notebook](/assets/clustering/BlogPost/Code/clustering.html)
+[Notebook](/assets/clustering/BlogPost/Code/Clustering.html)
 
 ---
 
