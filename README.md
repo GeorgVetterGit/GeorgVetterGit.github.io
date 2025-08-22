@@ -10,7 +10,7 @@
 
 ### Tiny Games in Python
 ![Thumbnail](/assets/tiny_games_in_python/pictures/banner.png)<br><br>
-The project series “Tiny Games in Python” consists of a collection of small, creative games developed with Python and Pygame. Each game is designed to demonstrate a specific concept or technique from the fields of game development, artificial intelligence, and/or interactive user experience. In addition, each project is documented in an accompanying blog post to reflect on the development process and share knowledge.
+The project series “Tiny Games in Python” consists of a collection of small, creative games developed with Python and Pygame. Each game is designed to demonstrate a specific concept or technique from the fields of game development, artificial intelligence, and/or interactive user experience. In addition, each project is documented in an accompanying blog post to reflect on the development process and share knowledge.<br><br>
 [Read more](/assets/tiny_games_in_python/text/tgip.md)
 
 <br>
