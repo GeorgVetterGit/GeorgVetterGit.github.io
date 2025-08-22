@@ -13,12 +13,16 @@
 The project series “Tiny Simulations in Python” consists of a collection of small, engaging simulations developed with Python. Each simulation is designed to illustrate a specific concept or technique from the fields of physics, biology, mathematics, and/or complex systems. Every project is accompanied by a blog post documenting the design and implementation process, aiming to reflect on the results and share knowledge.<br><br>
 [Read more](/assets/tiny_simulations_in_python/text/tsip.md)
 
+***
 
+<br>
 
 ### Tiny Games in Python
 ![Thumbnail](/assets/tiny_games_in_python/pictures/banner.png)<br><br>
 The project series “Tiny Games in Python” consists of a collection of small, creative games developed with Python and Pygame. Each game is designed to demonstrate a specific concept or technique from the fields of game development, artificial intelligence, and/or interactive user experience. In addition, each project is documented in an accompanying blog post to reflect on the development process and share knowledge.<br><br>
 [Read more](/assets/tiny_games_in_python/text/tgip.md)
+
+***
 
 <br>
 
@@ -28,6 +32,8 @@ In this project I used my Typo Generator to create typos in Pokémon names. I th
 ![Static Badge](https://img.shields.io/badge/NLP-blue) ![Static Badge](https://img.shields.io/badge/Clustering-blue) ![Static Badge](https://img.shields.io/badge/Machine_Learning-blue) ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br>
 [Read more](/assets/clustering/BlogPost/Text/clustering.md)
 
+***
+
 <br>
 
 ### Typo Generator
@@ -36,6 +42,8 @@ To train a cluster algorithm, I needed data that was already clustered, in the f
 ![Static Badge](https://img.shields.io/badge/NLP-blue) ![Static Badge](https://img.shields.io/badge/Machine_Learning-blue) <br>
 [Read more](/assets/typo_generator/text/typo_generator.md)
 
+***
+
 <br>
 
 ### t-SNE Visualization
@@ -43,6 +51,8 @@ To train a cluster algorithm, I needed data that was already clustered, in the f
 The project investigated visualizing high-dimensional data from the MNIST dataset using the t-SNE algorithm, preserving similarity between data points. Data was loaded from MNIST, then t-SNE applied to generate coordinates for a scatterplot, with each digit class represented by a distinct color. Results demonstrated clear clustering and separation between digit classes, suggesting t-SNE's efficacy for visualizing MNIST.<br><br>
 ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue) ![Static Badge](https://img.shields.io/badge/Clustering-blue)<br>
 [Read more](/assets/tsne/text/tsne.md)
+
+***
 
 <br>
 

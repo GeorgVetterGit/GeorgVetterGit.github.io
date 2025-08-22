@@ -16,6 +16,10 @@ This project successfully applied Genetic Algorithms to solve the N-Queens probl
 
 <br>
 
+***
+
+<br>
+
 ### Bully in the Playground
 ![Thumbnail](/assets/bully_in_the_playground/pictures/banner.png)<br><br>
 The “Bully in the Playground” model demonstrates how predator-prey dynamics and swarm behavior can emerge from just a few simple local rules. By adjusting parameters like speed, cohesion, separation, and avoidance, entirely different movement patterns appear—ranging from stable flocks to chaotic dispersal. This makes the model a powerful playground to explore emergent systems, multi-agent dynamics, and potential real-world applications.<br><br>
