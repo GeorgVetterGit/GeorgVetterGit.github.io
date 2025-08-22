@@ -7,7 +7,7 @@
 [![Static Badge](https://img.shields.io/badge/Medium-View_on_Medium-%23000000?logo=Medium)](https://medium.com/@georg.vetter.privat/clustering-duplicates-how-i-hunted-typos-in-pok%C3%A9mon-names-9dae8203272d) <br>
 
 Link to Visualisation:
-![](/assets/clustering/BlogPost/Visuals/optimized_clusters.html)
+![Thumbnail](/assets/clustering/BlogPost/Visuals/optimized_clusters.html)
 
 ---
 
