@@ -8,11 +8,10 @@
 
 ## Projects
 
-### From Random to Optimal: Implementing AI Strategies in Tic Tac Toe
-![Thumbnail](/assets/tic_tac_toe/pictures/tic_tac_toe_banner.png)<br><br>
-In this project, I developed a Tic Tac Toe game using Pygame and implemented three different AI opponents: a random AI, a Q-learning agent, and a Minimax algorithm. The goal was to explore game development, visual design, and AI strategy by training and evaluating the AIs through self-play and head-to-head matches, visualized in a Streamlit app. <br><br>
-![Static Badge](https://img.shields.io/badge/Optimization-blue) ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br>
-[Read more](/assets/tic_tac_toe/text/tictactoe.md)
+### Tiny Games in Python
+![Thumbnail](/assets/tiny_games_in_python/pictures/banner.png)<br><br>
+The project series “Tiny Games in Python” consists of a collection of small, creative games developed with Python and Pygame. Each game is designed to demonstrate a specific concept or technique from the fields of game development, artificial intelligence, and/or interactive user experience. In addition, each project is documented in an accompanying blog post to reflect on the development process and share knowledge.
+[Read more](/assets/tiny_games_in_python/text/tgip.md)
 
 <br>
 
