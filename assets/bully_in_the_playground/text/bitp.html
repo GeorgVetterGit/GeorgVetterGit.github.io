@@ -1,0 +1,43 @@
+<script src="https://rawcdn.githack.com/oscarmorrison/md-page/master/md-page.js"></script><noscript>
+
+**Project Report: Bully in the Playground Simulation**
+
+---
+![Thumbnail](/assets/bully_in_the_playground/pictures/Bild1.png)<br>
+---
+
+### Motivation
+Why do birds flock, why do fish school, and how can such complex natural phenomena be reduced to a handful of simple rules? For the most of us, these kinds of systems are particularly exciting because they show how emergent behavior can arise from very local interactions. Instead of hard-coding global patterns, we set up a few simple rules and let the dynamics play out.
+
+One playful but powerful example is the **“Bully in the Playground”** model. Imagine one bully chasing a group of kids across the schoolyard. The kids scatter, trying to stay safe, while at the same time clinging to the safety of the group. Out of this simple game of chase emerge movement patterns that look remarkably similar to flocking birds, schooling fish, or even crowd dynamics.
+
+### The Model: “Bully in the Playground”
+The model sets the stage in a two-dimensional playground where one or more predators (the bullies) are released together with a group of prey (the kids). The predators move toward their closest target, while the prey attempt to get away from danger. But instead of fleeing in random directions, the **kids exhibit swarm behavior**. They try to stay close to their peers, align their movements, and avoid collisions.
+
+This means that three of the famous **Boids rules**—alignment, cohesion, and separation—are already embedded in the simulation. By combining them with predator–prey dynamics, we get a system that is both simple to program and endlessly rich in the behavior it produces. What looks like coordinated strategy is actually nothing more than local interactions playing out again and again.
+
+### Model Parameters
+What makes the model particularly interesting is that it is **highly tunable**. By adjusting the parameters, we can influence the swarm in very different ways and essentially create new “ecosystems.” The number and speed of the bullies determine how much pressure the swarm is under. If the predators are too fast, the group becomes fragmented; if they are slow, the prey may easily escape.
+
+On the prey side, swarm speed, radius, and force influence how tightly the group holds together. Strong cohesion and high alignment lead to dense, almost military-like formations, while weak swarm forces or high separation values cause the group to scatter. The bully radius determines when predators begin to react, while avoidance introduces an explicit escape vector away from the threat. All these knobs give us a way to study how fragile or resilient collective behavior really is.
+
+### Try It Yourself
+Instead of just looking at code snippets, you can try the model interactively. I have created a **pygame demo** that lets you explore the dynamics in real time and adjust the parameters yourself.
+
+Link: [Bully in the Playground Simulation](/assets/bully_in_the_playground/simulation/index.html)
+
+Once you launch the demo, you can watch the swarm as it reacts to predators and reset or adjust the simulation with simple controls. This transforms the abstract concept of swarm rules into something visual, playful, and immediately intuitive.
+
+### What to Observe
+As you play with the model, certain patterns will quickly stand out. When cohesion and alignment are strong, the **prey form a compact swarm** that can withstand external pressure surprisingly well. But if you weaken these forces or add too many bullies, the **group splits into fragments** and becomes much easier to attack.
+
+Different predator speeds also lead to different dynamics. Fast predators tend to chase **specific targets directly**, while slower ones create a diffuse pressure that drives the swarm into strange, emergent formations. In some setups, the system even reaches a **quasi-stable equilibrium** where neither side “wins,” and the group continues to circle endlessly.
+
+### Next Steps: Experiments & Extensions
+The base model is just the beginning. Adding multiple predators or making the prey **heterogeneous in speed and behavior** adds even more richness. **Introducing obstacles or safe zones** creates new strategies and failure modes. And from a data science perspective, it becomes especially interesting when you start quantifying the swarm: measuring compactness, average distances, capture times, or even using optimization to search the parameter space for surprising configurations.
+
+### Conclusion
+The “Bully in the Playground” model shows how emergent behavior can arise from nothing more than local interactions. What looks like intelligent strategy is actually the product of simple rules applied over and over again. By experimenting with a live pygame demo, you can experience this phenomenon firsthand, tweaking parameters, watching new patterns emerge, and building intuition for how complex systems organize themselves.
+
+In the end, this small simulation is more than just a game. It is a **playPlayground**, a way to explore the dynamics of collective behavior and to connect the dots between playful models, natural systems, and real-world applications.
+
