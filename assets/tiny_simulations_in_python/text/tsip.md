@@ -14,8 +14,6 @@ This project successfully applied Genetic Algorithms to solve the N-Queens probl
 ![Static Badge](https://img.shields.io/badge/Optimization-blue) ![Static Badge](https://img.shields.io/badge/Data_Visualization-blue)<br>
 [Read more](/assets/nqueens/text/nqueens.html)
 
-<br>
-
 ***
 
 <br>
