@@ -1,0 +1,36 @@
+<script src="https://rawcdn.githack.com/oscarmorrison/md-page/master/md-page.js"></script><noscript>
+
+# Project Report: Building a Smart Pong Opponent - From Simple Rules to Adaptive Behavior
+
+![Thumbnail](/assets/pong/pictures/Bild1.png)<br>
+
+## Motivation
+Pong is one of the **simplest yet most iconic video games** ever created. Two paddles, a ball, and a goal: simple rules, but surprisingly engaging gameplay. Beyond nostalgia, Pong is also a great playground for exploring basic AI and adaptive behavior.
+
+In this study, we explore how a simple computer opponent can “learn” to respond to the player by adjusting its paddle position relative to the ball. This kind of **simple rule-based intelligence** illustrates the foundation of more complex agent behavior in games, simulations, and robotics.
+
+## The Model: Adaptive Pong Opponent
+The game is classic Pong: a ball bounces off walls, the player controls one paddle, and the computer controls the other. The twist comes in the AI of the computer paddle. **Instead of moving randomly or following a fixed pattern**, the computer updates its y-position relative to the ball’s y-position.
+
+In pseudo-logic:
+- Determine the vertical distance between the ball and the computer paddle.
+- Move the paddle up or down proportionally to reduce the distance.
+- Optionally, include a maximum speed so the paddle cannot move instantly to the ball’s position.
+
+Despite the simplicity, this creates an opponent that **appears intelligent**: it “tracks” the ball, reacts to the player’s moves, and can even “miss” if the speed is limited appropriately.
+
+## Play the Game
+Try out the adaptive computer opponent here:
+▶ Play Pong vs. Computer: [Play](/assets/pong/games/ai/index.html)
+
+The computer paddle moves automatically, and you control your paddle with Up/Down arrow keys.
+
+Against Another Human
+
+You can also play Pong against another human on the same keyboard:
+▶ Play Pong vs. Human: [Play](/assets/pong/games/pvp/index.html)
+
+Control the left paddle with W/S and the right paddle with Up/Down arrow keys. This setup allows two players to compete in real time on a single keyboard.
+
+## Implementation Note
+The core logic of the adaptive AI is simple, based on tracking the ball’s vertical position. With a small speed limit, the computer opponent becomes challenging but beatable, making it an excellent starting point for experimenting with agent-based behavior and simple adaptive rules.
