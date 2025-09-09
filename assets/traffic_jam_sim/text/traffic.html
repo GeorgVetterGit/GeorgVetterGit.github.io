@@ -1,0 +1,58 @@
+<script src="https://rawcdn.githack.com/oscarmorrison/md-page/master/md-page.js"></script><noscript>
+
+# Project Report: Traffic Jam Simulation in Pygame
+
+![Thumbnail](/assets/traffic_jam_sim/pictures/full.png)<br>
+
+## Introduction
+
+The goal of this project was to develop a Pygame simulation that demonstrates how traffic jams can emerge on a circular road. Through a graphical user interface, users can adjust the number of vehicles, acceleration, and braking distance. This allows for experimentation with different traffic conditions and helps illustrate how small changes in driving behavior or vehicle density can lead to complex phenomena such as “phantom traffic jams.”
+
+## Research Question
+
+The central question was: Under what conditions do traffic jams emerge, even without external disturbances such as accidents or obstacles?
+
+## Relevance of the Question
+
+This investigation is important because it highlights the fundamental mechanisms of traffic flow. Understanding these processes is relevant for traffic management, urban mobility planning, and the development of autonomous vehicles.
+
+## Data Basis
+
+The data was generated synthetically within the simulation. It included the positions, speeds, and accelerations of vehicles. At each simulation step (tick), the state of every vehicle was recorded.
+
+## Methods and Modeling
+
+The model is based on simple physical rules: vehicles accelerate as long as they have enough distance to the car in front, and they brake once the braking distance is exceeded. This agent-based approach was chosen because it captures the essential dynamics of traffic flow in a way that is computationally efficient and easy to interpret.
+
+The model parameters were adjusted and tested until realistic traffic behavior was observed: smooth flow at low densities, and congestion when vehicle density was high or braking distances were too short.
+
+## Validation
+
+Validation was done through observation: the simulation produced traffic jam phenomena that are well-documented in real-world studies. This confirmed that the model was able to reproduce fundamental traffic dynamics correctly.
+
+## Visualization and Results
+
+The results were presented in two ways:
+
+Visually in Pygame – cars move around the circular road, making traffic jams easy to recognize.
+
+Numerically – minimum, maximum, and average speeds were calculated and displayed to quantify traffic flow.
+
+The simulation revealed that high vehicle density or very short braking distances caused “wave patterns” in speed, which eventually led to traffic congestion.
+
+## Test the Simulation Yourself
+
+The simulation is available online and can be tested directly. Users can adjust braking distance, acceleration, and number of vehicles to observe the effects on traffic flow:
+👉 Test the simulation [here](/assets/traffic_jam_sim/simulation/index.html)
+
+## Insights
+
+The project showed that even simple rules can create complex, emergent phenomena. A particularly striking result was that traffic jams often occur without any external cause.
+
+## Outlook
+
+Future improvements could include more realistic driver models (e.g., reaction times, individual differences) as well as experiments with autonomous vehicles to study their influence on overall traffic flow.
+
+## Business Case
+
+The simulation provides practical value in education, research, and industry. It can be used to illustrate traffic phenomena, serve as a testbed for autonomous driving algorithms, or support decision-making in traffic and urban planning.
