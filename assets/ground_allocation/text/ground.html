@@ -1,0 +1,32 @@
+<script src="https://rawcdn.githack.com/oscarmorrison/md-page/master/md-page.js"></script><noscript>
+
+# Project Report: Simulation of Plot Allocation Procedures
+
+### Analysis of Fairness and Probability of Success in Different Allocation Methods
+
+![Thumbnail](/assets/traffic_jam_sim/pictures/full.png)<br>
+
+## Project Description
+
+This project explored how various allocation methods influence the chances and fairness in the distribution of municipal building plots. The aim was to replicate and analyze the reality of an application process as accurately as possible using __Monte Carlo simulations__ and optimization algorithms.
+
+## Methodology
+
+A synthetic population was generated based on statistical characteristics (age, marital status, number of children, volunteer work, degree of disability). Each individual was assigned a personal score ("social points") according to these criteria. There were 27 building plots of varying attractiveness available.
+
+__Three allocation procedures__ were simulated:
+•	Random procedure ("Random Walk")
+•	Points hierarchy (allocation based on descending social points)
+•	Optimal assignment using constraint-solving (Google OR-Tools)
+
+## Results
+
+The probability of success for an applicant was 37% in the random procedure, 64% in the points hierarchy procedure, and 96.8% in the optimization procedure. The simulation showed that __algorithmic optimization__ significantly increases the chances for a fair and efficient allocation.
+
+## Practical Relevance
+
+Although the theoretical results clearly show the advantages of the optimization procedure, the actual allocation in practice does not currently follow this method. The real-world implementation falls short of what is mathematically possible.
+
+## Conclusion
+
+Monte Carlo simulations and optimization algorithms offer valuable tools to make allocation procedures fairer and more transparent. The results indicate that the use of data-driven methods can improve fairness in plot allocation.
