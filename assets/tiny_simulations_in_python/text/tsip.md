@@ -8,6 +8,14 @@
 
 ## Projects
 
+### Kikeriki Game-Simulation Study
+![Thumbnail](/assets/kikeriki/pictures/screenshot_1.png)<br><br>
+This project analysed the statistical fairness of the children’s game KIKERIKI using Monte Carlo simulations across different rule variants, player counts, and numbers of cards. The results showed no significant advantage from starting position, turn order, or house rules, with fewer than 1% of tested scenarios showing random deviations. Overall, the game proved to be highly balanced, robust, and fair while remaining engaging for players of all ages.<br><br>
+![Static Badge](https://img.shields.io/badge/Simulation-blue) ![Static Badge](https://img.shields.io/badge/Visualization-blue)<br>
+[Read more](https://georgvettergit.github.io/kikeriki_analysis/)
+
+***
+
 ### Traffic Jam Simulation in Pygame
 ![Thumbnail](/assets/traffic_jam_sim/pictures/banner.png)<br><br>
 This project is a traffic jam simulation built with Pygame, where cars drive on a circular track. The user can adjust parameters such as the number of vehicles, acceleration, and braking distance through a graphical interface. The simulation then visualizes the movement of cars, calculates minimum, maximum, and average speeds, and demonstrates how certain settings can lead to traffic congestion.<br><br>
