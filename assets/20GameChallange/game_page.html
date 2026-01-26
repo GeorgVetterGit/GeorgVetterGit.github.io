@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Game Wall</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background: #060606;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ---------- Background ---------- */
+.background {
+    position: fixed;
+    inset: 0;
+    background: 
+        linear-gradient(to bottom, rgba(0,0,0,0.8), #060606),
+        url("images/background.png") center / cover;
+    z-index: -1;
+}
+
+/* ---------- Header ---------- */
+header {
+    padding: 50px 60px;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* ---------- Rows ---------- */
+.row {
+    margin-bottom: 60px;
+}
+
+.row h2 {
+    margin-left: 60px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 60px;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---------- Tile ---------- */
+.tile {
+    position: relative;
+    min-width: 260px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111;
+    cursor: pointer;
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.tile:hover {
+    transform: scale(1.4);
+    z-index: 5;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+}
+
+/* image + video */
+.tile img,
+.tile video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+/* video hidden */
+.tile video {
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.tile:hover video {
+    opacity: 1;
+}
+
+.tile:hover img {
+    opacity: 0;
+}
+
+/* gradient */
+.tile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.8), transparent 60%);
+}
+
+/* title */
+.title {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* spacing on hover */
+.slider:hover .tile {
+    margin-right: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>20 Games Challenge</header>
+
+<!-- Pico 8 Row -->
+<div class="row">
+    <h2>Pico 8</h2>
+    <div class="slider">
+
+        <div class="tile">
+            <img src="images/flappybird.png">
+            <video src="videos/flappybird.mp4" muted loop></video>
+            <div class="title">Flappy Bird</div>
+        </div>
+
+        <div class="tile">
+            <img src="images/game3.jpg">
+            <video src="videos/game3.mp4" muted loop></video>
+            <div class="title">Pong</div>
+        </div>
+
+        <div class="tile">
+            <img src="images/breakout.png">
+            <video src="videos/game3.mp4" muted loop></video>
+            <div class="title">Breakout</div>
+        </div>
+
+        <div class="tile">
+            <img src="images/game3.jpg">
+            <video src="videos/game3.mp4" muted loop></video>
+            <div class="title">Frogger</div>
+        </div>
+
+        <div class="tile">
+            <img src="images/datacakedash.png">
+            <video src="videos/game3.mp4" muted loop></video>
+            <div class="title">Platformer</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Pygame Row -->
+<div class="row">
+    <h2>Pygame</h2>
+    <div class="slider">
+
+        <div class="tile">
+            <img src="images/pong_py.png">
+            <video src="videos/game2.mp4" muted loop></video>
+            <div class="title">Pong</div>
+        </div>
+
+        <div class="tile">
+            <img src="images/tic_tac_toe_py.png">
+            <video src="videos/game2.mp4" muted loop></video>
+            <div class="title">Tic Tac Toe</div>
+        </div>
+
+        <div class="tile">
+            <img src="images/game2.jpg">
+            <video src="videos/game2.mp4" muted loop></video>
+            <div class="title">Space Shooter</div>
+        </div>
+
+        <div class="tile">
+            <img src="images/game2.jpg">
+            <video src="videos/game2.mp4" muted loop></video>
+            <div class="title">Minesweeper</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Unity Row -->
+<div class="row">
+    <h2>Unity</h2>
+    <div class="slider">
+
+        <div class="tile">
+            <img src="images/game2.jpg">
+            <video src="videos/game2.mp4" muted loop></video>
+            <div class="title">Space Shooter</div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.querySelectorAll(".tile").forEach(tile => {
+    const video = tile.querySelector("video");
+
+    tile.addEventListener("mouseenter", () => {
+        video.currentTime = 0;
+        video.play();
+    });
+
+    tile.addEventListener("mouseleave", () => {
+        video.pause();
+    });
+});
+</script>
+
+</body>
+</html>
