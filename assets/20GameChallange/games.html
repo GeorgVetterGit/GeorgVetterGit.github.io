@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Georg Vetter – Game Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ─────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:        #0a0a0f;
+      --surface:   rgba(20, 20, 30, 0.75);
+      --card:      rgba(30, 30, 45, 0.65);
+      --card-hover:rgba(40, 40, 60, 0.85);
+      --accent:    #e50914;
+      --accent2:   #b20710;
+      --text:      #e5e5e5;
+      --muted:     #808090;
+      --radius:    8px;
+      --transition: 0.35s cubic-bezier(.25,.8,.25,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ── Navbar ────────────────────────────────────────── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; gap: 32px;
+      padding: 16px 48px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+      backdrop-filter: blur(12px);
+      transition: background 0.3s;
+    }
+    .navbar.scrolled { background: rgba(10,10,15,0.95); }
+
+    .navbar .logo {
+      font-size: 1.6rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), #ff6b6b);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links li {
+      cursor: pointer; font-size: 0.9rem; font-weight: 600;
+      color: var(--muted); transition: color 0.2s;
+    }
+    .nav-links li:hover, .nav-links li.active { color: #fff; }
+
+    .nav-filters {
+      margin-left: auto; display: flex; gap: 12px;
+    }
+    .filter-btn {
+      padding: 6px 16px; border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      color: var(--muted); font-size: 0.8rem; font-weight: 600;
+      cursor: pointer; transition: var(--transition);
+    }
+    .filter-btn:hover { border-color: var(--accent); color: #fff; }
+    .filter-btn.active {
+      background: var(--accent); border-color: var(--accent); color: #fff;
+    }
+
+    /* ── Hero ──────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 70vh; min-height: 450px;
+      display: flex; align-items: flex-end;
+      padding: 0 48px 60px;
+      background: linear-gradient(135deg, #1a0a2e 0%, #0a0a1a 40%, #0f1923 100%);
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 50%;
+      background: linear-gradient(transparent, var(--bg));
+    }
+
+    .hero-particles {
+      position: absolute; inset: 0; overflow: hidden;
+    }
+    .hero-particles span {
+      position: absolute; display: block;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: rgba(229,9,20,0.3);
+      animation: float linear infinite;
+    }
+    @keyframes float {
+      0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 600px; }
+    .hero-content h1 {
+      font-size: 3.5rem; font-weight: 900; line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero-content h1 span { color: var(--accent); }
+    .hero-content p { font-size: 1.1rem; color: var(--muted); line-height: 1.6; margin-bottom: 24px; }
+    .hero-stats {
+      display: flex; gap: 32px;
+    }
+    .hero-stat .number {
+      font-size: 2rem; font-weight: 900; color: var(--accent);
+    }
+    .hero-stat .label {
+      font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;
+    }
+
+    /* ── Section / Row ────────────────────────────────── */
+    .content { padding: 20px 0 80px; }
+
+    .row {
+      margin-bottom: 48px;
+      transition: opacity 0.4s, transform 0.4s;
+    }
+    .row.hidden { display: none; }
+
+    .row-header {
+      display: flex; align-items: center; gap: 12px;
+      padding: 0 48px; margin-bottom: 14px;
+    }
+    .row-header h2 { font-size: 1.35rem; font-weight: 700; }
+    .engine-badge {
+      padding: 3px 10px; border-radius: 4px;
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .engine-badge.pygame  { background: rgba(50,200,80,0.2); color: #50e868; }
+    .engine-badge.unity   { background: rgba(100,150,255,0.2); color: #80aaff; }
+    .engine-badge.pico8   { background: rgba(255,180,50,0.2); color: #ffcc44; }
+    .engine-badge.web     { background: rgba(255,100,180,0.2); color: #ff80b0; }
+
+    /* ── Slider ───────────────────────────────────────── */
+    .slider-wrapper {
+      position: relative;
+      padding: 0 48px;
+    }
+    .slider-wrapper:hover .slider-arrow { opacity: 1; }
+
+    .slider {
+      display: flex; gap: 12px;
+      overflow-x: auto; scroll-behavior: smooth;
+      padding: 16px 4px 24px;
+      scrollbar-width: none;
+    }
+    .slider::-webkit-scrollbar { display: none; }
+
+    .slider-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 10; width: 44px; height: 100%;
+      background: rgba(0,0,0,0.6); border: none;
+      color: #fff; font-size: 1.8rem; cursor: pointer;
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .slider-arrow.left  { left: 0; border-radius: 0 4px 4px 0; padding-left: 12px; }
+    .slider-arrow.right { right: 0; border-radius: 4px 0 0 4px; padding-right: 12px; }
+    .slider-arrow:hover { background: rgba(0,0,0,0.85); }
+
+    /* ── Game Card ─────────────────────────────────────── */
+    .card {
+      flex: 0 0 280px;
+      height: 158px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      background: var(--card);
+      transition: transform var(--transition), box-shadow var(--transition), flex var(--transition);
+      transform-origin: center center;
+    }
+    .card:first-child { transform-origin: left center; }
+    .card:last-child  { transform-origin: right center; }
+
+    .card:hover {
+      transform: scale(1.35);
+      z-index: 20;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.7), 0 0 0 2px rgba(229,9,20,0.3);
+    }
+
+    .card-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s;
+    }
+
+    .card video {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .card:hover video { opacity: 1; }
+    .card:hover .card-img { opacity: 0; }
+
+    /* Info Overlay (appears on hover, below the card) */
+    .card-info {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 40px 12px 10px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.92));
+      transform: translateY(20px);
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .card:hover .card-info {
+      transform: translateY(0); opacity: 1;
+    }
+
+    .card-title {
+      font-size: 0.85rem; font-weight: 700;
+      margin-bottom: 4px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+
+    .card-meta {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.65rem; color: var(--muted);
+    }
+    .card-meta .tag {
+      padding: 1px 6px; border-radius: 3px;
+      background: rgba(255,255,255,0.1);
+      font-weight: 600;
+    }
+
+    .card-placeholder {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(30,30,50,0.9), rgba(20,20,35,0.9));
+      font-size: 2.5rem;
+    }
+
+    /* ── Footer ────────────────────────────────────────── */
+    footer {
+      text-align: center; padding: 32px;
+      color: var(--muted); font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── Responsive ────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .navbar { padding: 12px 20px; gap: 16px; }
+      .nav-filters { display: none; }
+      .hero { padding: 0 20px 40px; height: 50vh; }
+      .hero-content h1 { font-size: 2.2rem; }
+      .row-header, .slider-wrapper { padding: 0 20px; }
+      .card { flex: 0 0 200px; height: 113px; }
+      .slider-arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ────── Navbar ────── -->
+<nav class="navbar" id="navbar">
+  <div class="logo">GV Games</div>
+  <ul class="nav-links">
+    <li class="active" data-section="all">Alle</li>
+    <li data-section="engines">Engines</li>
+    <li data-section="categories">Kategorien</li>
+  </ul>
+  <div class="nav-filters" id="engineFilters">
+    <button class="filter-btn active" data-engine="all">Alle</button>
+    <button class="filter-btn" data-engine="pygame">Pygame</button>
+    <button class="filter-btn" data-engine="unity">Unity</button>
+    <button class="filter-btn" data-engine="pico8">Pico-8</button>
+    <button class="filter-btn" data-engine="web">Web</button>
+  </div>
+</nav>
+
+<!-- ────── Hero ────── -->
+<section class="hero">
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <h1>Meine <span>Games</span></h1>
+    <p>Eine Sammlung meiner selbst programmierten Spiele und Simulationen — 
+       von kleinen Arcade-Klassikern bis hin zu KI-gestützten Experimenten.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="number" id="gameCount">0</div>
+        <div class="label">Spiele</div>
+      </div>
+      <div class="hero-stat">
+        <div class="number">3</div>
+        <div class="label">Engines</div>
+      </div>
+      <div class="hero-stat">
+        <div class="number" id="catCount">0</div>
+        <div class="label">Kategorien</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── Content ────── -->
+<main class="content" id="content"></main>
+
+<!-- ────── Footer ────── -->
+<footer>
+  &copy; 2026 Georg Vetter &middot; 
+  <a href="https://github.com/GeorgVetterGit" target="_blank">GitHub</a> &middot;
+  <a href="https://medium.com/@georg.vetter.privat" target="_blank">Medium</a>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════════
+//  GAME DATA — edit this array to add/remove games
+// ═══════════════════════════════════════════════════
+const games = [
+  {
+    title: "Pong",
+    engine: "pygame",
+    categories: ["arcade", "klassiker"],
+    image: "assets/pong/banner.png",
+    video: null,
+    link: "assets/pong/assets.pptx",
+    emoji: "🏓"
+  },
+  {
+    title: "Breakout",
+    engine: "web",
+    categories: ["arcade", "klassiker"],
+    image: "assets/20GameChallange/breakout.png",
+    video: null,
+    link: "assets/breakout/breakout.html",
+    emoji: "🧱"
+  },
+  {
+    title: "Tic Tac Toe",
+    engine: "unity",
+    categories: ["strategie", "ki"],
+    image: "assets/tic_tac_toe/tic_tac_toe_banner.png",
+    video: null,
+    link: "assets/tic_tac_toe/index.html",
+    emoji: "❌"
+  },
+  {
+    title: "Pico Bird",
+    engine: "pico8",
+    categories: ["arcade"],
+    image: "assets/20GameChallange/flappybird.png",
+    video: "assets/20GameChallange/flappybird.mp4",
+    link: "assets/pico_bird/index.html",
+    emoji: "🐦"
+  },
+  {
+    title: "Kikeriki",
+    engine: "unity",
+    categories: ["action"],
+    image: "assets/kikeriki/screenshot_1.png",
+    video: null,
+    link: "assets/kikeriki/index.html",
+    emoji: "🐔"
+  },
+  {
+    title: "Life Simulation",
+    engine: "unity",
+    categories: ["simulation", "ki"],
+    image: "assets/life_simulation/banner.png",
+    video: null,
+    link: "assets/life_simulation/index.html",
+    emoji: "🧬"
+  },
+  {
+    title: "Bully in the Playground",
+    engine: "unity",
+    categories: ["simulation", "ki"],
+    image: "assets/bully_in_the_playground/banner.png",
+    video: null,
+    link: "assets/bully_in_the_playground/index.html",
+    emoji: "👊"
+  },
+  {
+    title: "Traffic Jam Sim",
+    engine: "unity",
+    categories: ["simulation"],
+    image: "assets/traffic_jam_sim/banner.png",
+    video: null,
+    link: "assets/traffic_jam_sim/index.html",
+    emoji: "🚗"
+  },
+  {
+    title: "Schlauchen",
+    engine: "web",
+    categories: ["puzzle"],
+    image: null,
+    video: null,
+    link: "assets/schlauchen/index.html",
+    emoji: "🔧"
+  },
+  {
+    title: "Tiny Games in Python",
+    engine: "pygame",
+    categories: ["arcade", "sammlung"],
+    image: "assets/tiny_games_in_python/banner.png",
+    video: null,
+    link: null,
+    emoji: "🎮"
+  },
+  {
+    title: "Tiny Simulations in Python",
+    engine: "pygame",
+    categories: ["simulation", "sammlung"],
+    image: "assets/tiny_simulations_in_python/banner.png",
+    video: null,
+    link: null,
+    emoji: "🔬"
+  },
+  {
+    title: "Data Cake Dash",
+    engine: "web",
+    categories: ["arcade"],
+    image: "assets/20GameChallange/datacakedash.png",
+    video: null,
+    link: "assets/data_cake_dash_be/index.html",
+    emoji: "🎂"
+  },
+  {
+    title: "Pong (Python)",
+    engine: "pygame",
+    categories: ["arcade", "klassiker"],
+    image: "assets/20GameChallange/pong_py.png",
+    video: null,
+    link: null,
+    emoji: "🏓"
+  },
+  {
+    title: "Tic Tac Toe (Python)",
+    engine: "pygame",
+    categories: ["strategie", "ki"],
+    image: "assets/20GameChallange/tic_tac_toe_py.png",
+    video: null,
+    link: null,
+    emoji: "⭕"
+  }
+];
+
+// ═══════════════════════════════════════════════════
+//  ROW DEFINITIONS
+// ═══════════════════════════════════════════════════
+const engineLabels = {
+  pygame: "Pygame",
+  unity:  "Unity",
+  pico8:  "Pico-8",
+  web:    "Web / JS"
+};
+
+const categoryLabels = {
+  arcade:    "🕹️ Arcade",
+  klassiker: "👾 Klassiker",
+  strategie: "♟️ Strategie",
+  puzzle:    "🧩 Puzzle",
+  simulation:"🌍 Simulation",
+  ki:        "🤖 KI & Machine Learning",
+  action:    "⚡ Action",
+  sammlung:  "📦 Sammlungen"
+};
+
+// ═══════════════════════════════════════════════════
+//  BUILD ROWS
+// ═══════════════════════════════════════════════════
+function buildRows(section, engineFilter) {
+  const container = document.getElementById('content');
+  container.innerHTML = '';
+  let rows = [];
+
+  if (section === 'all' || section === 'engines') {
+    for (const [eng, label] of Object.entries(engineLabels)) {
+      if (engineFilter !== 'all' && engineFilter !== eng) continue;
+      const items = games.filter(g => g.engine === eng);
+      if (items.length) rows.push({ title: label, badge: eng, games: items });
+    }
+  }
+
+  if (section === 'all' || section === 'categories') {
+    for (const [cat, label] of Object.entries(categoryLabels)) {
+      const items = games.filter(g => g.categories.includes(cat));
+      if (engineFilter !== 'all') {
+        const filtered = items.filter(g => g.engine === engineFilter);
+        if (filtered.length) rows.push({ title: label, badge: null, games: filtered });
+      } else {
+        if (items.length) rows.push({ title: label, badge: null, games: items });
+      }
+    }
+  }
+
+  rows.forEach(row => {
+    container.appendChild(createRow(row));
+  });
+
+  document.getElementById('gameCount').textContent = games.length;
+  document.getElementById('catCount').textContent = Object.keys(categoryLabels).length;
+}
+
+function createRow({ title, badge, games: items }) {
+  const row = document.createElement('div');
+  row.className = 'row';
+
+  const header = document.createElement('div');
+  header.className = 'row-header';
+  header.innerHTML = `<h2>${title}</h2>` +
+    (badge ? `<span class="engine-badge ${badge}">${engineLabels[badge] || badge}</span>` : '');
+  row.appendChild(header);
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'slider-wrapper';
+
+  const arrowL = document.createElement('button');
+  arrowL.className = 'slider-arrow left';
+  arrowL.innerHTML = '‹';
+
+  const arrowR = document.createElement('button');
+  arrowR.className = 'slider-arrow right';
+  arrowR.innerHTML = '›';
+
+  const slider = document.createElement('div');
+  slider.className = 'slider';
+
+  items.forEach(g => slider.appendChild(createCard(g)));
+
+  arrowL.addEventListener('click', () => slider.scrollBy({ left: -600, behavior: 'smooth' }));
+  arrowR.addEventListener('click', () => slider.scrollBy({ left: 600, behavior: 'smooth' }));
+
+  wrapper.appendChild(arrowL);
+  wrapper.appendChild(slider);
+  wrapper.appendChild(arrowR);
+  row.appendChild(wrapper);
+
+  return row;
+}
+
+function createCard(game) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  if (game.link) card.addEventListener('click', () => window.open(game.link, '_blank'));
+
+  if (game.image) {
+    const img = document.createElement('img');
+    img.className = 'card-img';
+    img.src = game.image;
+    img.alt = game.title;
+    img.loading = 'lazy';
+    card.appendChild(img);
+  } else {
+    const ph = document.createElement('div');
+    ph.className = 'card-placeholder';
+    ph.textContent = game.emoji;
+    card.appendChild(ph);
+  }
+
+  if (game.video) {
+    const vid = document.createElement('video');
+    vid.src = game.video;
+    vid.muted = true;
+    vid.loop = true;
+    vid.playsInline = true;
+    vid.preload = 'none';
+    card.appendChild(vid);
+
+    card.addEventListener('mouseenter', () => {
+      vid.currentTime = 0;
+      vid.play().catch(() => {});
+    });
+    card.addEventListener('mouseleave', () => {
+      vid.pause();
+      vid.currentTime = 0;
+    });
+  }
+
+  const info = document.createElement('div');
+  info.className = 'card-info';
+  info.innerHTML = `
+    <div class="card-title">${game.title}</div>
+    <div class="card-meta">
+      <span class="tag">${engineLabels[game.engine] || game.engine}</span>
+      ${game.categories.map(c => `<span class="tag">${c}</span>`).join('')}
+    </div>
+  `;
+  card.appendChild(info);
+
+  return card;
+}
+
+// ═══════════════════════════════════════════════════
+//  NAV & FILTER LOGIC
+// ═══════════════════════════════════════════════════
+let currentSection = 'all';
+let currentEngine = 'all';
+
+document.querySelectorAll('.nav-links li').forEach(li => {
+  li.addEventListener('click', () => {
+    document.querySelectorAll('.nav-links li').forEach(x => x.classList.remove('active'));
+    li.classList.add('active');
+    currentSection = li.dataset.section;
+    buildRows(currentSection, currentEngine);
+  });
+});
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
+    btn.classList.add('active');
+    currentEngine = btn.dataset.engine;
+    buildRows(currentSection, currentEngine);
+  });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar')
+    .classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ═══════════════════════════════════════════════════
+//  HERO PARTICLES
+// ═══════════════════════════════════════════════════
+(function initParticles() {
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 30; i++) {
+    const span = document.createElement('span');
+    span.style.left = Math.random() * 100 + '%';
+    span.style.width = span.style.height = (2 + Math.random() * 4) + 'px';
+    span.style.animationDuration = (6 + Math.random() * 12) + 's';
+    span.style.animationDelay = Math.random() * 8 + 's';
+    container.appendChild(span);
+  }
+})();
+
+// ═══════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════
+buildRows(currentSection, currentEngine);
+</script>
+</body>
+</html>
